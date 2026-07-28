@@ -21,6 +21,20 @@ existe vraiment.
   de feux 2007-2025. Là, la donnée est différenciante (Martigues, Marseille et
   les communes boisées ressortent).
 
+## Aperçu
+
+Inondation de Marseille (3 scénarios de crue, ici tous affichés) :
+
+![Carte inondation](assets/carte_inondation.png)
+
+Incendies par commune sur le département 13 (Martigues et Marseille en tête) :
+
+![Carte incendies](assets/carte_incendies.png)
+
+Ces images sont des captures des cartes HTML, générées par
+`tools/rendu_png.py` (Chrome sans fenêtre). Les vraies cartes restent
+interactives : ouvrir les fichiers HTML.
+
 ## Method
 
 - **Index spatial** : Marseille compte ~5000 polygones inondables ; les ranger
@@ -61,6 +75,12 @@ python3 carte_incendies.py  # -> carte_incendies.html   (département 13)
 Ouvrir les fichiers HTML dans un navigateur. GitHub n'affiche pas les cartes
 interactives : il faut les ouvrir localement.
 
+Pour régénérer les aperçus PNG (nécessite `selenium` + Chrome) :
+
+```bash
+python3 tools/rendu_png.py   # -> assets/*.png
+```
+
 ## Tests
 
 ```bash
@@ -79,6 +99,9 @@ python3 tests/test_geometrie.py
 │   ├── carte_inondation.py # carte inondation, 3 couches (folium + pyproj)
 │   ├── main.py             # pipeline inondation
 │   └── carte_incendies.py  # carte incendie par commune (dépt 13)
+├── tools/
+│   └── rendu_png.py        # capture les cartes HTML en PNG (Chrome headless)
+├── assets/                 # les PNG affichés dans ce README
 ├── tests/
 │   └── test_geometrie.py
 └── data/
@@ -91,5 +114,5 @@ python3 tests/test_geometrie.py
 
 - Changer de commune (inondation) : ajuster `COMMUNE` et le TRI dans `main.py`
   (la commune doit être couverte par le TRI choisi).
-- Améliorations possibles : mailles plus fines, aléa feu de forêt spatial
+- Idées d'améliorations possibles : mailles plus fines, aléa feu de forêt spatial
   (PPRIF / occupation du sol) pour différencier l'incendie DANS une commune.
