@@ -5,6 +5,7 @@ __pycache__/
 
 # data
 data/
+assets/
 
 # C extensions
 *.so
