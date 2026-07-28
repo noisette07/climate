@@ -35,7 +35,7 @@ Ces images sont des captures des cartes HTML, générées par
 `tools/rendu_png.py` (Chrome sans fenêtre). Les vraies cartes restent
 interactives : ouvrir les fichiers HTML.
 
-## Method
+## Méthode
 
 - **Index spatial** : Marseille compte ~5000 polygones inondables ; les ranger
   dans une grille de cases de 1 km évite de tester chaque maille contre tous.
@@ -53,7 +53,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Data
+## Données
 
 - **Inondation** : zonages TRI 2020 du département 13, sur
   [GeoRisques](https://www.georisques.gouv.fr/). Volumineux (~900 Mo), **non
