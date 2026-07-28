@@ -59,7 +59,7 @@ pip install -r requirements.txt
   [GeoRisques](https://www.georisques.gouv.fr/). Volumineux (~900 Mo), **non
   versionné** (voir `.gitignore`) → à télécharger dans `data/tri_2020_sig_di_13/`.
 - **Incendie** : export CSV de la [BDIFF](https://bdiff.agriculture.gouv.fr/)
-  (dépt 13, feux de forêt, 2007-2025), dans `data/Incendies.csv`.
+  (dépt 13, feux de forêt, 2007-2025) → à télécharger dans `data/Incendies.csv`.
 - **Contours de communes** : récupérés une fois sur
   [geo.api.gouv.fr](https://geo.api.gouv.fr/) et mis en cache dans
   `data/communes_13.geojson`.
